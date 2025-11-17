@@ -862,6 +862,11 @@ nav h1{
     input[type=email], #user{
         padding: 13px 20px 13px 3px;
       }
+   textarea {
+          width: 95%;
+          margin: 0 auto;
+          display: block;
+        }
     form{
         margin: 0;
         text-align: center;
@@ -940,6 +945,7 @@ nav h1{
     margin: 12px 0;
     /* height: auto; */
   }
+
 
 
 }
