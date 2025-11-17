@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+
+.portfolio {
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  border: 2px #ffcc00 solid;
+  padding: 20px;
+  border-radius: 12px;
+  
+}
+.slide {
+  display: none;
+}
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.caption {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  width: auto;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.3s;
+  user-select: none;
+}
+.prev { left: 0; }
+.next { right: 0; }
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+.img{
+  border-radius: 14px;
+}
+
+</style>
+<body>
+
+    <div class="portfolio">
+        <div class="slide">
+            <h1>Welcome to Zainith Tech</h1>
+        </div>
+        <div class="slide">
+            <p>We are happy to help!</p>
+        </div>
+        <div class="slide">
+            <img src="/images/145.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="/images/blade.png" alt="">
+        </div>
+        <div class="slide">
+            <img src="/images/blade.png" alt="">
+        </div>
+        <a class="prev" onclick="changeSlide(-1)"></a> 
+        <a class="next" onclick="changeSlide(1)"></a> 
+    </div>
+<form action="index.html" method="get">
+    <input type="checkbox" name="" id="">
+    <input type="submit" value="">
+</form>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index){
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[index].style.display = 'block';
+        }
+
+        function changeSlide(n){
+            slideIndex = (slideIndex + n + slides.length) % slides.length
+            showSlide(slideIndex);
+        }
+
+        showSlide(slideIndex);
+
+            
+        setInterval(() =>{
+          changeSlide(1);
+        }, 1500);
+
+
+        // Length Slide
+        // collect the html element
+        // function to show/display slide
+        // change the order of the slide / previous and next slide
+        // time interval
+
+        // const elements = document.querySelectorAll("div, h1, h2, h3, p, article, section");
+
+        // slides[0], slides[1],  slides[2], slides[3], slides[4]
+    </script>
+</body>
+</html>

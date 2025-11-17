@@ -1,0 +1,389 @@
+Nice! 🎉 I’ll give you 20 different CSS animations with their code.
+Each example will have a CSS snippet (and sometimes minimal HTML) so you can copy and run them.
+
+
+---
+
+1. Fade In
+
+<div class="fade-in">Fade In</div>
+
+<style>
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+</style>
+
+
+---
+
+2. Fade Out
+
+<div class="fade-out">Fade Out</div>
+
+<style>
+.fade-out {
+  animation: fadeOut 2s ease-in-out;
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+</style>
+
+
+---
+
+3. Slide In (from left)
+
+<div class="slide-in-left">Slide In</div>
+
+<style>
+.slide-in-left {
+  animation: slideLeft 1.5s ease-out;
+  position: relative;
+}
+@keyframes slideLeft {
+  from { left: -100%; opacity: 0; }
+  to { left: 0; opacity: 1; }
+}
+</style>
+
+
+---
+
+4. Slide In (from top)
+
+<div class="slide-in-top">Slide Down</div>
+
+<style>
+.slide-in-top {
+  animation: slideTop 1.5s ease-out;
+  position: relative;
+}
+@keyframes slideTop {
+  from { top: -100px; opacity: 0; }
+  to { top: 0; opacity: 1; }
+}
+</style>
+
+
+---
+
+5. Bounce
+
+<div class="bounce">Bounce</div>
+
+<style>
+.bounce {
+  animation: bounce 2s infinite;
+  display: inline-block;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+</style>
+
+
+---
+
+6. Pulse
+
+<div class="pulse">Pulse</div>
+
+<style>
+.pulse {
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+</style>
+
+
+---
+
+7. Shake
+
+<div class="shake">Shake</div>
+
+<style>
+.shake {
+  animation: shake 0.6s infinite;
+  display: inline-block;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+</style>
+
+
+---
+
+8. Rotate
+
+<div class="rotate">Rotate</div>
+
+<style>
+.rotate {
+  animation: rotate 2s linear infinite;
+  display: inline-block;
+}
+@keyframes rotate {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+</style>
+
+
+---
+
+9. Flip (Y-axis)
+
+<div class="flip">Flip</div>
+
+<style>
+.flip {
+  animation: flip 2s infinite;
+  display: inline-block;
+}
+@keyframes flip {
+  from { transform: rotateY(0); }
+  to { transform: rotateY(360deg); }
+}
+</style>
+
+
+---
+
+10. Zoom In
+
+<div class="zoom-in">Zoom In</div>
+
+<style>
+.zoom-in {
+  animation: zoomIn 1.5s ease-in;
+  transform: scale(0);
+}
+@keyframes zoomIn {
+  to { transform: scale(1); }
+}
+</style>
+
+
+---
+
+11. Zoom Out
+
+<div class="zoom-out">Zoom Out</div>
+
+<style>
+.zoom-out {
+  animation: zoomOut 1.5s ease-in;
+  transform: scale(1);
+}
+@keyframes zoomOut {
+  to { transform: scale(0); opacity: 0; }
+}
+</style>
+
+
+---
+
+12. Typing Effect
+
+<div class="typing">Typing Effect...</div>
+
+<style>
+.typing {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ff6314;
+  animation: typing 4s steps(20) forwards;
+}
+@keyframes typing {
+  to { width: 15ch; }
+}
+</style>
+
+
+---
+
+13. Loading Dots
+
+<div class="dots">Loading<span>.</span><span>.</span><span>.</span></div>
+
+<style>
+.dots span {
+  animation: blink 1s infinite;
+}
+.dots span:nth-child(1) { animation-delay: 0s; }
+.dots span:nth-child(2) { animation-delay: 0.3s; }
+.dots span:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+</style>
+
+
+---
+
+14. Heartbeat
+
+<div class="heartbeat">❤️</div>
+
+<style>
+.heartbeat {
+  font-size: 50px;
+  animation: heartbeat 1.2s infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  20%, 60% { transform: scale(1.3); }
+  40%, 80% { transform: scale(1.1); }
+}
+</style>
+
+
+---
+
+15. Swing
+
+<div class="swing">Swing</div>
+
+<style>
+.swing {
+  display: inline-block;
+  animation: swing 2s infinite;
+  transform-origin: top center;
+}
+@keyframes swing {
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(5deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0); }
+}
+</style>
+
+
+---
+
+16. Color Change
+
+<div class="color-change">Color Change</div>
+
+<style>
+.color-change {
+  animation: colorChange 3s infinite;
+}
+@keyframes colorChange {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: green; }
+}
+</style>
+
+
+---
+
+17. Background Gradient Shift
+
+<div class="bg-shift">Gradient Shift</div>
+
+<style>
+.bg-shift {
+  padding: 20px;
+  color: white;
+  animation: gradientShift 5s infinite alternate;
+  background: linear-gradient(270deg, red, blue, green);
+  background-size: 600% 600%;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+</style>
+
+
+---
+
+18. Text Glow
+
+<div class="glow">Glowing Text</div>
+
+<style>
+.glow {
+  animation: glow 2s infinite alternate;
+  color: white;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 5px blue, 0 0 10px cyan; }
+  to { text-shadow: 0 0 20px purple, 0 0 30px pink; }
+}
+</style>
+
+
+---
+
+19. Wave (Text)
+
+<div class="wave">
+  <span>W</span><span>a</span><span>v</span><span>e</span>
+</div>
+
+<style>
+.wave span {
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+.wave span:nth-child(1) { animation-delay: 0s; }
+.wave span:nth-child(2) { animation-delay: 0.2s; }
+.wave span:nth-child(3) { animation-delay: 0.4s; }
+.wave span:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+</style>
+
+
+---
+
+20. Spinning Loader
+
+<div class="loader"></div>
+
+<style>
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 5px solid #ccc;
+  border-top-color: blue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+</style>
+
+
+---
+
+⚡ That’s 20 CSS animations you can use right away.
+Do you want me to combine all of them into one HTML page so you can preview them together in one place?
+

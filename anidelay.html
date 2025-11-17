@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animation Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Default hidden state */
+    div, h1, article, section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+
+    /* When in view */
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delays */
+    .delay-1 { transition-delay: 0.2s; }
+    .delay-2 { transition-delay: 0.4s; }
+    .delay-3 { transition-delay: 0.6s; }
+    .delay-4 { transition-delay: 0.8s; }
+
+    /* Just to create spacing */
+    section, article, div {
+      margin: 80px auto;
+      max-width: 700px;
+      padding: 40px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="delay-1">Scroll Animations</h1>
+
+  <section class="delay-2">This is a section</section>
+  <article class="delay-3">This is an article</article>
+  <div class="delay-4">This is a div</div>
+  <section class="delay-1">Another section</section>
+  <article class="delay-2">Another article</article>
+  <div class="delay-3">Another div</div>
+
+  <script>
+    // Select all elements we want to animate
+    const elements = document.querySelectorAll("div, h1, article, section");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
